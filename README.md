@@ -90,22 +90,21 @@ To include screenshots and a link to the script in your Markdown file, you can u
 Here are the screenshots illustrating various stages of the script execution:
 
 1. **Initial Script Setup:**
-   ![Initial Script Setup](path/to/initial_setup_screenshot.png)
-
+   ![Initial Script Setup](screenshots/vscode.png)
+   ![Localhost Wordpress site](screenshots/site.png)
+   
 2. **Brute Force Attack in Progress:**
-   ![Brute Force Attack in Progress](path/to/brute_force_in_progress_screenshot.png)
+   ![Brute Force Attack in Progress](screenshots/brute_force_in_progress_screenshot.png)
 
 3. **Successful Login Attempt:**
-   ![Successful Login Attempt](path/to/successful_login_screenshot.png)
+   ![Successful Login Attempt](screenshots/successful_login_screenshot.png)
 
 4. **Summary of Results:**
-   ![Summary of Results](path/to/summary_of_results_screenshot.png)
+   ![Summary of Results](screenshots/summary_of_results_screenshot.png)
 
 ### Link to Script
 
-You can find the full script on [GitHub](https://github.com/yourusername/your-repository).
-
-Replace `path/to/initial_setup_screenshot.png`, `path/to/brute_force_in_progress_screenshot.png`, `path/to/successful_login_screenshot.png`, and `path/to/summary_of_results_screenshot.png` with the actual paths to your screenshot images. Also, replace `https://github.com/yourusername/your-repository` with the actual URL to your script on GitHub or any other platform where the script is hosted.
+You can find the full script on [GitHub](https://github.com/SteveSplash934/wp-x-force.git).
 
 ### 5. Analyzing the Results
 - **Identify Successful Attempts:** Monitor the output to identify successful login attempts, though, script will break and save valid logins, once successful. Analyze the responses to understand which combinations worked and why.

@@ -20,7 +20,7 @@ passKey = "pwd"
 wps_username = "admin"
 
 # Define Target URL and Login Endpoint
-URL = "http://127.0.0.150/wp-login.php"
+URL = "http://wphacking/wp-login.php"
 
 
 
@@ -72,10 +72,11 @@ def process_lines(filename, url, username, puser_key, ppass_key, psuccess_msg: l
                 print(f"{COLOR_YELLOW}PASSWORD{COLOR_RED} NOT FOUND!!!.{COLOR_RESET}")
 
     except FileNotFoundError:
-        print(f"{COLOR_RED}File not found. Please provide a valid filename.{COLOR_RESET}")
+        print(f"{COLOR_RED}Password list not found. Please provide a valid path.{COLOR_RESET}")
 
 # Get the filename from the user
 filename = input(f"{COLOR_YELLOW}Enter the filename to password data from: {COLOR_RESET}")
+# filename = 'tests/password.txt'
 
 # Create a thread for processing lines from the file
 processing_thread = threading.Thread(target=process_lines, args=(filename, URL, wps_username, userKey, passKey, succMsg, errorMsg, ))
