@@ -71,22 +71,28 @@ The beauty of this script is its versatility; it's not limited to WordPress. You
       pass
     ```
 
-- **Ask user to enter password list filepath:**
+- **Ask user to enter the filepath of the password list:**
   ```python
   # Get the filename from the user
   filename = input(f"{COLOR_YELLOW}Enter the filename to read password from: {COLOR_RESET}")
   ```
 
-### 3. Executing the Attack
-- **Ask user to enter password list filepath:**
+- **Add threads to speed up script operation:**
   ```python
   # Create a thread for processing lines from the file
   processing_thread = threading.Thread(target=process_lines, args=(filename, URL, wps_username, userKey, passKey, succMsg, errorMsg, ))
   processing_thread.start()
   ```
+### 3. Executing the Attack
+- **Make sure all requirements are installed:**
+  ```batch
+  python3 -m pip install -r requirements.txt
+  ```
 
-### 4. Screenshots
-To include screenshots and a link to the script in your Markdown file, you can use the following syntax:
+- **Run the script:**
+  ```batch
+  python3 wp-x-force.py
+  ```
 
 ### 4. Screenshots
 Here are the screenshots illustrating various stages of the script execution:
