@@ -1,4 +1,6 @@
-### Project: WordPress Hacking
+## Project: WordPress Hacking
+
+![Main Image](screenshots/banner.jpg)
 
 **Objective:**
 The aim of this project is to explore the security vulnerabilities in WordPress sites, particularly focusing on password cracking. This project serves as a practical exercise to understand the importance of robust password policies and the potential risks of weak credentials.
