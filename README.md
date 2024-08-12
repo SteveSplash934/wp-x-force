@@ -1,134 +1,33 @@
-## Project: WordPress Hacking
+# wp-x-force
 
-![Main Image](screenshots/banner.jpg)
+**Notice:** This repository has been renamed and moved to a new location. For the latest version of the project, please visit the new repository at [https://github.com/SteveSplash934/wpcrack](https://github.com/SteveSplash934/wpcrack).
 
-**Objective:**
-The aim of this project is to explore the security vulnerabilities in WordPress sites, particularly focusing on password cracking. This project serves as a practical exercise to understand the importance of robust password policies and the potential risks of weak credentials.
+## About
 
-**Tools:**
-1. **Target WordPress Site:** A vulnerable WordPress site set up for testing purposes. It is crucial to ensure that the site used is either owned by you or set up in a controlled environment to avoid illegal activities.
-2. **Username & Password List:** As the time of writing, this script only support using a single username and a list of common passwords to carry out brute force attacks. These lists can be sourced from public datasets or generated based on common patterns.
+`wp-x-force` was a Python script designed for ethical penetration testing to crack WordPress login pages. The project has been renamed and updated as `wpcrack` with additional features and improvements.
 
-**Languages Used:**
-- **Python:** The primary language for scripting the attack. Python is chosen for its simplicity and the availability of numerous libraries that facilitate web requests and automation.
+## New Repository
 
-### Project Outline
+The updated repository is now available at:
 
-#### 1. Setting Up the Environment
-- **Create a Test WordPress Site:** Set up a WordPress site on a local server or a virtual machine. Ensure it is isolated from any production environment to prevent unintended consequences.
-- **Prepare Username & Password Lists:** Compile a list of common usernames and passwords. Websites like `SecLists` or `RockYou` can provide extensive lists for testing.
+[https://github.com/SteveSplash934/wpcrack](https://github.com/SteveSplash934/wpcrack)
 
-### 2. Scripting the Attack
+Please visit the new repository for the latest version, features, and updates.
 
-In this section, we will use the `requests`, `threading`, `urllib3`, and `colorama` libraries to automate and colorize our brute force attack script. 
+## Features of the New Repository
 
-#### Python Libraries
-- **requests:** For sending HTTP requests.
-- **threading:** To perform the attack using multiple threads for efficiency.
-- **urllib3:** To handle HTTP requests.
-- **colorama:** For adding colored output to the console for better readability.
+- Enhanced functionality for cracking WordPress login pages.
+- Support for additional export formats.
+- New features including random user-agents, captcha bypass, multithreading, and more.
 
-#### Script Structure:
-- **Import Libraries:**
-  ```python
-  import requests
-  import threading
-  import urllib3
-  from colorama import Fore, init
-  ```
+## Migration
 
-- **Disable Insecure Request Warnings (Optional):**
-  ```python
-  urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-  ```
+If you have cloned or forked this repository previously, please update your references to point to the new repository. The old repository will remain archived but will not receive further updates.
 
-- **Basic script configuration:**
-The beauty of this script is its versatility; it's not limited to WordPress. You can use it on any site by adjusting a few configurations, as outlined below.
-  ```python
-  # CONFIGURATIONS
-  succMsg = ["Dashboard", "Settings", "Appearance", "Plugins"] # the success message that can only been seen if the user has loggedin
-  errorMsg = "The password you entered for the username" # login error message
-  userKey = "log" # the HTML user input field name
-  passKey = "pwd" # the HTML password input field name
-  wps_username = "admin" # target username if known
-  ```
+## Issues and Support
 
-- **Define Target URL and Login Endpoint:**
-  ```python
-  URL = "http://127.0.0.150/wp-login.php"
-  ```
+For issues or support related to the new repository, please open an issue on the new repository page:
 
-- **Function to handle login with the given URL, username, and password:**
-  ```python
-    def login_to_site(url, username, password, user_key, pass_key, success_msg: list, error_msg):
-      # function body in source code file
-      pass
-  ```
-- **Function to handle processing each line of the file:**
-    ```python
-    def process_lines(filename, url, username, puser_key, ppass_key, psuccess_msg: list, perror_msg):
-      # function body in source code file
-      pass
-    ```
+[https://github.com/SteveSplash934/wpcrack/issues](https://github.com/SteveSplash934/wpcrack/issues)
 
-- **Ask user to enter the filepath of the password list:**
-  ```python
-  # Get the filename from the user
-  filename = input(f"{COLOR_YELLOW}Enter the filename to read password from: {COLOR_RESET}")
-  ```
-
-- **Add threads to speed up script operation:**
-  ```python
-  # Create a thread for processing lines from the file
-  processing_thread = threading.Thread(target=process_lines, args=(filename, URL, wps_username, userKey, passKey, succMsg, errorMsg, ))
-  processing_thread.start()
-  ```
-### 3. Executing the Attack
-- **Make sure all requirements are installed:**
-  ```batch
-  python3 -m pip install -r requirements.txt
-  ```
-
-- **Run the script:**
-  ```batch
-  python3 wp-x-force.py
-  ```
-
-### 4. Screenshots
-Here are the screenshots illustrating various stages of the script execution:
-
-1. **Initial Script Setup:**
-   ![Initial Script Setup](screenshots/vscode.png)
-   ![Localhost Wordpress site](screenshots/site.png)
-   
-2. **Brute Force Attack in Progress:**
-   ![Brute Force Attack in Progress](screenshots/brute_force_in_progress_screenshot.png)
-
-3. **Successful Login Attempt:**
-   ![Successful Login Attempt](screenshots/successful_login_screenshot.png)
-
-4. **Summary of Results:**
-   ![Summary of Results](screenshots/summary_of_results_screenshot.png)
-
-### Link to Script
-
-You can find the full script on [GitHub](https://github.com/SteveSplash934/wp-x-force.git).
-
-### 5. Analyzing the Results
-- **Identify Successful Attempts:** Monitor the output to identify successful login attempts, though, script will break and save valid logins, once successful. Analyze the responses to understand which combinations worked and why.
-
-- **Document Findings:** Create a report detailing the successful combinations, the time taken, and any patterns observed.
-
-### Ethical Considerations
-- **Legal Compliance:** Ensure that all activities are conducted in a legal and ethical manner. Only perform tests on sites you own or have explicit permission to test.
-- **Responsible Disclosure:** If vulnerabilities are found on a site not owned by you, responsibly disclose them to the site owner or administrator.
-
-### Conclusion
-This project highlights the importance of strong password policies and the potential risks associated with weak credentials. By understanding these vulnerabilities, one can better secure their WordPress sites against such attacks.
-
-### Future Work
-- **Support of Username list:** Support for username list will be added in v2
-- **Command-line GUI:** User-friendly command-line interaction coming soon
-- **Enhanced Security Measures:** Explore additional security measures such as two-factor authentication and CAPTCHA implementation.
-- **Advanced Attack Techniques:** Investigate more sophisticated attack methods and defenses against them.
-- **Automated Reporting:** Develop scripts to automatically generate reports based on the findings, providing a comprehensive overview of the security posture of the target site.
+Thank you for your interest and support!
